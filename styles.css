@@ -1,0 +1,38 @@
+body{
+    background-image: url("bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#box
+{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+h1{
+    margin-left: 380px;
+    color: orange;
+}
+p{
+    margin-left: 210px;
+}
+#getacall{
+    background-color: orange;
+    margin-left: 120px;
+}
+#name{
+    margin-left: 120px;
+}
+#email
+{
+    margin-left: 120px;
+}
+#Phone
+{
+    margin-left: 120px;
+}
+#tfc
+{
+    margin-left: 120px;
+}
+
