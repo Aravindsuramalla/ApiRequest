@@ -29,8 +29,18 @@ function editUsers(e)
 }
 function loadItems()
 { 
+    axios.get("https://crudcrud.com/api/efc535336243410f8c29bca7b7da7e6f/UserData")
+    .then((res)=>{
+                    console.log(res)
+                    for(var i=0;i<res.data.length;i++)
+                    {
+                        var li=createNewLi(res.data[i])
+                        ul.append(li);
+                    }
+    })
+    .catch((err)=>console.log(err))
     
-    for(x in localStorage){
+    /**for(x in localStorage){
         if(x=='length')
             break;
         var value = localStorage.getItem(x);
@@ -43,7 +53,7 @@ function loadItems()
         ul.append(li);
         //bt.onclick=deleteUsers();
       //new_div.append(value.name);
-    }
+    }**/
 }
 function createNewLi(value)
 {
@@ -97,7 +107,7 @@ function print(e)
     };
 
     //localStorage.setItem(user_records.name,JSON.stringify(user_records));
-    axios.post("https://crudcrud.com/api/621975186d024a6f9259d50c3e1b2c30/UserData",user_records)
+    axios.post("https://crudcrud.com/api/efc535336243410f8c29bca7b7da7e6f/UserData",user_records)
     .then((res)=>console.log(res.data))
     .catch((err)=>console.log(err)); 
 
